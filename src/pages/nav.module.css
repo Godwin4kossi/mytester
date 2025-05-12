@@ -1,0 +1,10 @@
+.nav {
+    background-color: aquamarine;
+    display: flex;
+    gap: 5px;
+    top: 0;
+}
+.nav .link{
+   color: red;
+    padding: 5px;
+}

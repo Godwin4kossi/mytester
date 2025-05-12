@@ -1,0 +1,111 @@
+import React from "react";
+import { Helmet } from "react-helmet";
+import logo from "assets/logo.png";
+import register from "../assets/register.png";
+import { Link } from "react-router-dom"; 
+
+const Enterprise = () => {
+  return (
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Classcube Pro | SignUp</title>
+      </Helmet>
+
+      <div className="flex justify-center content-center t-[50px] mb-[30px] h-[100vh]">
+        <div className="flex flex-col items-center col-lg-6">
+          <div className="flex items-center justify-center mt-[50px] mb-[30px]">
+            <img src={logo} className="w-[160px] h-[40px]" alt="Logo" />
+          </div>
+          <h1 className="text-center text-[#0c78f1] text-[4.6rem] font-[700] mb-[15px] font-">
+            SignUp as an Enterprise
+          </h1>
+          <p className="text-center text-[#5E6C85] text-[2rem] pb-5 font-[400]">
+            Please enter Your details
+          </p>
+          <form action="" className="w-1/2">
+            <div className="form-group mb-[20px]">
+              <label className="font-[500px] text-[1.4rem] text-black">
+                Full Name
+              </label>
+              <input
+                type="text"
+                className="border control-form color-darkGrey"
+                name="fullname"
+                placeholder="Enter your full name"
+              />
+            </div>
+            <div className="form-group mb-[20px]">
+              <label className="font-[500px] text-[1.4rem] text-black">
+                Email
+              </label>
+              <input
+                type="text"
+                className="border control-form color-darkGrey"
+                name="email"
+                placeholder="Email"
+              />
+            </div>
+            <div className="form-group mb-[20px]">
+              <label className="font-[500px] text-[1.4rem] text-black">
+                Organisation Name
+              </label>
+              <input
+                type="text"
+                className="border control-form color-darkGrey"
+                name="organisation_Name"
+                placeholder="organisation_Name"
+              />
+            </div>
+            <div className="form-group mb-[20px]">
+              <label className="font-[500px] text-[1.4rem] text-black">
+                Password
+              </label>
+              <input
+                type="text"
+                className="border control-form color-darkGrey"
+                name="password"
+                placeholder="Enter Your password"
+              />
+            </div>
+            <div className="form-group mb-[20px]">
+              <label className="font-[500px] text-[1.4rem] text-black">
+                Confirm Password
+              </label>
+              <input
+                type="text"
+                className="border control-form color-darkGrey"
+                name="confirmPassword"
+                placeholder="Confirm Your password"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="btn submit-signup w-full bg-[#0c78f1] text-white p-[15px] text-[1.4rem]  mt-[40px]"
+            >
+              {" "}
+              Sign Up
+            </button>
+            {/* <p>
+              Already have an accout? <Link to="/about">Login</Link>
+            </p> */}
+          </form>
+        </div>
+
+        <div className="flex flex-col items-start col-lg-6 background_banner z-10">
+          <h1 className="courses-you-need">
+            All the Courses You Need in One Place
+          </h1>
+          <p className="courses-you-need-sub">
+            This should include a clear description of those learners that will
+            find your course valuable.
+          </p>
+          <img className="background_banner1" src={register} alt="girl" />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Enterprise;
