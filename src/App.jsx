@@ -1,17 +1,15 @@
-
+import { createContext, useState } from "react";
 import Checkout from "./Checkout";
-import { UserProvider } from "./context/UserContext";
 import Login from "./Login";
+import Logout from "./Logout";
+import { UserProvider } from "./context/UserContext";
+import UseDisplayMessage from "./hooks/useDisplayMessage";
 
 function App() {
-  return (
-    <div>
-      <UserProvider>
-        <Login />
-        <Checkout />
-      </UserProvider>
-    </div>
-  );
+  const [message, displayMessage] = UseDisplayMessage();
+  displayMessage();
+  return <div>Message is : {message}</div>;
+  
 }
 
 export default App;
